@@ -27,7 +27,7 @@ public class SecurityConfig {
                 .requestMatchers("/admin/**").hasRole("ADMIN")
                 .requestMatchers("/doctor/**").hasRole("DOCTOR")
                 .requestMatchers("/user/**").hasRole("USER")
-                .anyRequest().permitAll()
+                .anyRequest().authenticated()
             )
             .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .addFilterBefore(jwtsFilter, UsernamePasswordAuthenticationFilter.class);
