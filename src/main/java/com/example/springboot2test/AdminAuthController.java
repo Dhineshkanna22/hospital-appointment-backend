@@ -61,9 +61,9 @@ public class AdminAuthController {
 
         if (adminDataRepo.findByEmail(superAdminEmail) == null) {
             AdminData adminData = new AdminData();
-            adminData.setName("Murugan");
+            adminData.setName("ShivaBala");
             adminData.setEmail(superAdminEmail);
-            adminData.setPassword(passwordEncoder.encode("admin123")); // ✅ Use simple password
+            adminData.setPassword(passwordEncoder.encode("ShivaBala@123")); 
             adminData.setRole("ADMIN");
 
             adminDataRepo.save(adminData);
