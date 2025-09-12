@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"https://hospital-appointment-frontend-gamma.vercel.app", "http://localhost:3000"})
 public class AppointmentController {
 
     @Autowired

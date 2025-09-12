@@ -19,7 +19,7 @@ import jakarta.annotation.PostConstruct;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"https://hospital-appointment-frontend-gamma.vercel.app", "http://localhost:3000"})
 public class AdminAuthController {
 
     @Autowired

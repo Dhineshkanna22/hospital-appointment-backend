@@ -29,7 +29,7 @@ import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {"https://hospital-appointment-frontend-gamma.vercel.app", "http://localhost:3000"})
 public class Controller {
 
     @Autowired
