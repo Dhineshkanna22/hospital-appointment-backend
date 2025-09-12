@@ -10,7 +10,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+    "https://hospital-appointment-frontend-gamma.vercel.app",
+    "http://localhost:3000"
+})
 @RequestMapping("/user/payment")
 public class PaymentController {
 
