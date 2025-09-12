@@ -58,19 +58,18 @@ public class AdminAuthController {
     @PostConstruct
     public void initSuperAdmin() {
         String superAdminEmail = "dhineshkannag@gmail.com";
-        
-        AdminData existingAdmin = adminDataRepo.findByEmail(superAdminEmail);
-        if (existingAdmin == null) {
+
+        if (adminDataRepo.findByEmail(superAdminEmail) == null) {
             AdminData adminData = new AdminData();
             adminData.setName("Murugan");
             adminData.setEmail(superAdminEmail);
-            adminData.setPassword(passwordEncoder.encode("admin123"));
+            adminData.setPassword(passwordEncoder.encode("admin123")); // ✅ Use simple password
             adminData.setRole("ADMIN");
-            
+
             adminDataRepo.save(adminData);
-            System.out.println("✅ Super admin created successfully");
+            System.out.println("✅ Super admin created successfully with password: admin123");
         } else {
-            System.out.println("✅ Super admin already exists: " + existingAdmin.getEmail());
+            System.out.println("✅ Super admin already exists");
         }
     }
 }
